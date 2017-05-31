@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="@dimen/activity_padding"
+    tools:context="com.blackboxteam.app.blackbox.LaunchScreenActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="87.33dp"
+        android:layout_marginBottom="11.78dp"
+        android:src="@drawable/blackbox_logo" />
+
+    <TextView
+        android:id="@+id/LogoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Blackbox"
+        fontPath="fonts/Avenir-Heavy.ttf"
+        android:textSize="35sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:paddingBottom="2.89dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="44.00dp"
+        android:layout_marginRight="43.33dp"
+        android:layout_marginBottom="85.11dp"
+        android:text="Blackbox protects your device against thefts"
+        fontPath="fonts/Avenir-Book.ttf"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/secureButton"
+        android:layout_width="155.56dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="SECURE YOUR PHONE"
+        android:layout_marginBottom="103.78dp"
+        android:layout_marginLeft="71.11dp"
+        android:layout_marginRight="31.7pt"
+        android:textColor="@color/secureButtonTextColor"
+        android:onClick="sendMessage"
+        fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
+        android:background="@color/secureButtonBackgroundColor"/>
+
+</LinearLayout>
