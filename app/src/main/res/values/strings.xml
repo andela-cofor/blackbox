@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Blackbox</string>
+    <string name="secure_text">SECURE YOUR PHONE</string>
+    <string name="app_aim">Blackbox protects your device against thefts</string>
 </resources>
