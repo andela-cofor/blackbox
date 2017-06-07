@@ -7,44 +7,45 @@
     android:orientation="vertical"
     android:background="@android:color/white"
     android:padding="@dimen/activity_padding"
-    tools:context="com.blackboxteam.app.blackbox.LaunchScreenActivity">
+    tools:context="com.blackboxteam.app.blackbox.DeactivaionScreenActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="141dp"
+        android:layout_height="104dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/blackbox_logo" />
+        android:layout_marginTop="80dp"
+        android:src="@drawable/blackbox_checkmark" />
 
     <TextView
         android:id="@+id/LogoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Blackbox"
-        android:textSize="35sp"
+        android:layout_marginTop="30dp"
+        android:text="Your device is secure"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/descText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="Blackbox protects your device against theft"
-        android:textSize="20sp" />
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="Blackbox is active"
+        android:textSize="25sp" />
 
     <Button
-        android:id="@+id/button_secure"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/button_deactivate"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:text="SECURE YOUR PHONE"
-        android:layout_marginTop="120dp"
+        android:text="DE-ACTIVATE"
+        android:layout_marginTop="50dp"
         android:textColor="@android:color/white"
-        android:onClick="sendMessage"
-        android:background="@color/secureBtn" />
+        android:onClick=""
+        android:background="@color/secureBtn"/>
 </LinearLayout>
