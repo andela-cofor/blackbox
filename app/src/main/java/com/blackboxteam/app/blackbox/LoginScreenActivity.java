@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 import com.blackboxteam.app.blackbox.util.Validation;
 
@@ -17,65 +19,63 @@ import static com.blackboxteam.app.blackbox.util.Validation.validateMinLength;
 
 public class LoginScreenActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button loginBtn;
-    EditText etEmail, etPassword;
-    TextInputLayout tiEmail, tiPassword;
-    Validation validate;
+    @BindView(R.id.button_login) Button loginButton;
+    @BindView(R.id.edit_text_email) EditText editTextEmail;
+    @BindView(R.id.edit_text_password) EditText editTextPassword;
+    @BindView(R.id.text_input_email) TextInputLayout textInputEmail;
+    @BindView(R.id.text_input_password) TextInputLayout textInputPassword;
+
+    public Validation validate;
+    private Integer password_length = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
+        ButterKnife.bind(this);
 
-        loginBtn = (Button) findViewById(R.id.btn_login);
-        etEmail = (EditText) findViewById(R.id.et_email);
-        etPassword = (EditText) findViewById(R.id.et_password);
-        tiEmail = (TextInputLayout) findViewById(R.id.ti_email);
-        tiPassword = (TextInputLayout) findViewById(R.id.ti_password);
-        loginBtn.setOnClickListener(this);
+        loginButton.setOnClickListener(this);
     }
 
     private void login() {
-        setError();
-        String email = etEmail.getText().toString();
-        String password = etPassword.getText().toString();
+        clearErrorMessage();
+        String email = editTextEmail.getText().toString();
+        String password = editTextPassword.getText().toString();
 
         int err = 0;
 
         if (!validateEmail(email)) {
             err++;
-            tiEmail.setError("Email should be valid");
+            textInputEmail.setError("Email should be valid");
         }
 
-        if (!validateMinLength(password, 6)) {
+        if (!validateMinLength(password, password_length)) {
             err++;
-            tiPassword.setError("Password must be greater than 5");
+            textInputPassword.setError("Password must be greater than " + (password_length - 1));
         }
 
         if (err == 0) {
-            Intent intent = new Intent(LoginScreenActivity.this, TestPage.class);
+            Intent intent = new Intent(LoginScreenActivity.this, ActivateBlackboxScreenActivity.class);
             startActivity(intent);
         } else {
             showSnackBarMessage("Enter Valid Details !");
         }
     }
 
-    private void setError() {
-        tiEmail.setError(null);
-        tiPassword.setError(null);
+    private void clearErrorMessage() {
+        textInputEmail.setError(null);
+        textInputPassword.setError(null);
     }
 
     private void showSnackBarMessage(String message){
         Toast.makeText(LoginScreenActivity.this, message,
                 Toast.LENGTH_SHORT).show();
-//        View parentLayout = findViewById(R.id.root_view);
-//        Snackbar.make(parentLayout,message,Snackbar.LENGTH_SHORT).show();
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_login:
+        switch (v.getId()) {
+            case R.id.button_login:
                 login();
         }
     }

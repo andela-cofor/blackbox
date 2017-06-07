@@ -10,26 +10,14 @@ import android.util.Patterns;
 public class Validation {
 
     public static boolean validateIfEmpty(String name) {
-        if (TextUtils.isEmpty(name)) {
-            return false;
-        } else {
-            return true;
-        }
+        return !TextUtils.isEmpty(name);
     }
 
     public static boolean validateMinLength(String name, int valueLength) {
-        if (name.length() < valueLength) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(name.length() < valueLength);
     }
 
     public static boolean validateEmail(String string) {
-        if (TextUtils.isEmpty(string) || !Patterns.EMAIL_ADDRESS.matcher(string).matches()) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(TextUtils.isEmpty(string) || !Patterns.EMAIL_ADDRESS.matcher(string).matches());
     }
 }
