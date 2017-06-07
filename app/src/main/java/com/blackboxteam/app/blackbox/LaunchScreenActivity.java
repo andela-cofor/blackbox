@@ -24,7 +24,7 @@ public class LaunchScreenActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button_secure:
-                Intent intent = new Intent(LaunchScreenActivity.this, LoginScreenActivity.class);
+                Intent intent = new Intent(LaunchScreenActivity.this, SignUpScreen.class);
                 startActivity(intent);
         }
     }
