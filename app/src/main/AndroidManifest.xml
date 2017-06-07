@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginScreenActivity" />
-        <activity android:name=".ActivateBlackboxScreenActivity"></activity>
+        <activity android:name=".TestPage"/>
+        <activity android:name=".ActivateBlackboxScreenActivity"/>
     </application>
 
 </manifest>
