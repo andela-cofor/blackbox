@@ -21,6 +21,7 @@
         <activity android:name=".TestPage"/>
         <activity android:name=".ActivateBlackboxScreenActivity"/>
         <activity android:name=".DeactivaionScreenActivity"></activity>
+        <activity android:name=".ActivationScreenActivity"></activity>
     </application>
 
 </manifest>
