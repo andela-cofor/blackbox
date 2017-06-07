@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="@dimen/activity_padding"
+    tools:context="com.blackboxteam.app.blackbox.ActivateBlackboxScreenActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="141dp"
+        android:layout_height="104dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/blackbox_cancelmark" />
+
+    <TextView
+        android:id="@+id/LogoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="Your device is not secure"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="Blackbox is de-actived"
+        android:textSize="23sp" />
+
+    <Button
+        android:id="@+id/button_activate"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="ACTIVATE"
+        android:layout_marginTop="50dp"
+        android:textColor="@android:color/white"
+        android:onClick=""
+        android:background="@color/secureBtn"/>
+</LinearLayout>
