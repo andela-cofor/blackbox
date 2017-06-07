@@ -35,7 +35,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="Blackbox protects your device against theft"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button_secure"
@@ -46,6 +46,5 @@
         android:layout_marginTop="120dp"
         android:textColor="@android:color/white"
         android:onClick="sendMessage"
-        android:background="@color/secureBtn"/>
-
+        android:background="@color/secureBtn" />
 </LinearLayout>
