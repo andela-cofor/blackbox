@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Blackbox</string>
+    <string name="signup_text">Sign up with an <b>accessible</b> email address and a <b>secure</b> password</string>
     <string name="activation_text">Once you activate Blackbox, you will receive an email, to <b>john.doe@gmail.com</b> each time a new SIM card is inserted in this device, containing the device location and the new SIM card phone number</string>
 </resources>

@@ -53,7 +53,7 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
         }
 
         if (err == 0) {
-            Intent intent = new Intent(LoginScreenActivity.this, TestPage.class);
+            Intent intent = new Intent(LoginScreenActivity.this, SignUpScreen.class);
             startActivity(intent);
         } else {
             showSnackBarMessage("Enter Valid Details !");
