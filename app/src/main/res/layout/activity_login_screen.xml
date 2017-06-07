@@ -2,11 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    android:padding="@dimen/activity_padding"
+    android:paddingTop="@dimen/activity_padding"
+    android:paddingBottom="@dimen/activity_padding"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
     tools:context="com.blackboxteam.app.blackbox.LoginScreenActivity">
 
     <ImageView
@@ -19,7 +23,7 @@
         android:src="@drawable/blackbox_logo" />
 
     <TextView
-        android:id="@+id/LogoText"
+        android:id="@+id/tv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -27,32 +31,41 @@
         android:textSize="35sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/Email_text"
-        android:layout_width="250dp"
-        android:layout_gravity="center_horizontal"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_email"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:hint="Email Address"
-        android:inputType="text" />
+        android:layout_marginTop="10dp">
 
-    <EditText
-        android:id="@+id/Password_text"
-        android:layout_width="250dp"
-        android:layout_gravity="center_horizontal"
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ti_password"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button"
-        android:layout_below="@+id/textView1"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        />
+        android:layout_marginTop="10dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@android:color/white">
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/btn_login"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -62,12 +75,13 @@
         android:background="@color/secureBtn"/>
 
     <TextView
-        android:id="@+id/descText"
+        android:id="@+id/tv_forget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:layout_marginTop="8dp"
         android:text="Forget Password"
         android:textSize="20sp"/>
 
