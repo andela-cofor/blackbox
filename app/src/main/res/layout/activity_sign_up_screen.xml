@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/body"
-    android:padding="39dp"
+    android:paddingLeft="41.33dp"
+    android:paddingRight="41.33dp"
     tools:context="com.blackboxteam.app.blackbox.ActivationScreenActivity"
     android:weightSum="1">
 
@@ -15,7 +16,7 @@
         android:layout_width="199dp"
         android:layout_height="67dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="25.11dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/padlock"
         android:layout_weight="0.20" />
@@ -31,6 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            android:letterSpacing="0.2"
+            fontPath="fonts/Avenir-Book.ttf"
             android:inputType="textEmailAddress" />
 
     </android.support.design.widget.TextInputLayout>
@@ -49,10 +52,11 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:hint="Password"
+            android:letterSpacing="0.2"
             android:inputType="textPassword"
+            fontPath="fonts/Avenir-Book.ttf"
             />
     </android.support.design.widget.TextInputLayout>
-
 
     <Button
         android:id="@+id/button_secure"
@@ -61,8 +65,10 @@
         android:layout_gravity="center_horizontal"
         android:text="SIGN UP"
         android:layout_marginTop="50dp"
-        android:textColor="@color/secureButtonTextColor"
+        android:textColor="@color/signUpButtonTextColor"
         android:onClick="sendMessage"
+        android:letterSpacing="0.2"
+        fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
         android:background="@android:color/white"/>
 
     <TextView
@@ -71,11 +77,19 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:paddingTop="20dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:textColor="@android:color/white"
-        android:text="@string/signup_text"
+        fontPath="fonts/Avenir-Book.ttf"
+        android:text="@string/signup_text_line1"
         android:textSize="15sp"/>
 
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        fontPath="fonts/Avenir-Book.ttf"
+        android:text="@string/signup_text_line2"
+        android:textSize="15sp"/>
 
 </LinearLayout>

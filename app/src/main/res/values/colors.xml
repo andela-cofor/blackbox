@@ -7,4 +7,6 @@
     <color name="body">#4C4C4C</color>
     <color name="secureButtonBackgroundColor">#5c5c5c</color>
     <color name="secureButtonTextColor">#fff</color>
+
+    <color name="signUpButtonTextColor">#4a4a4a</color>
 </resources>
