@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:paddingTop="@dimen/activity_padding"
+    android:paddingBottom="@dimen/activity_padding"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    tools:context="com.blackboxteam.app.blackbox.LoginScreenActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/blackbox_logo" />
+
+    <TextView
+        android:id="@+id/text_view_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Blackbox"
+        fontPath="fonts/Avenir-Heavy.ttf"
+        android:textSize="35sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="18.44dp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginLeft="18.6dp"
+            android:layout_marginRight="18.6dp"
+            fontPath="fonts/Avenir-Book.ttf"
+            android:inputType="textEmailAddress" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@android:color/white">
+
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            fontPath="fonts/Avenir-Book.ttf"
+            android:layout_marginLeft="18.6dp"
+            android:layout_marginRight="18.6dp"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="LOGIN"
+        fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="70.89dp"
+        android:layout_marginRight="70.89dp"
+        android:background="@color/secureButtonBackgroundColor"/>
+
+    <TextView
+        android:id="@+id/text_view_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="2.22dp"
+        android:text="Forgot Password"
+        android:layout_marginBottom="114.89dp"
+        fontPath="fonts/Avenir-Book.ttf"
+        android:textSize="15sp"/>
+
+
+</LinearLayout>
