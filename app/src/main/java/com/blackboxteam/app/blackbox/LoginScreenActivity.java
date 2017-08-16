@@ -1,5 +1,6 @@
 package com.blackboxteam.app.blackbox;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
@@ -11,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.blackboxteam.app.blackbox.util.Validation;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.blackboxteam.app.blackbox.util.Validation.validateEmail;
 import static com.blackboxteam.app.blackbox.util.Validation.validateMinLength;
@@ -68,8 +71,6 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
     private void showSnackBarMessage(String message){
         Toast.makeText(LoginScreenActivity.this, message,
                 Toast.LENGTH_SHORT).show();
-//        View parentLayout = findViewById(R.id.root_view);
-//        Snackbar.make(parentLayout,message,Snackbar.LENGTH_SHORT).show();
     }
 
     @Override
@@ -78,5 +79,10 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
             case R.id.btn_login:
                 login();
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

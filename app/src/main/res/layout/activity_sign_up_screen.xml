@@ -61,7 +61,7 @@
         android:layout_gravity="center_horizontal"
         android:text="SIGN UP"
         android:layout_marginTop="50dp"
-        android:textColor="@color/secureBtn"
+        android:textColor="@color/secureButtonTextColor"
         android:onClick="sendMessage"
         android:background="@android:color/white"/>
 

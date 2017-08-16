@@ -9,8 +9,8 @@
     android:background="@android:color/white"
     android:paddingTop="@dimen/activity_padding"
     android:paddingBottom="@dimen/activity_padding"
-    android:paddingLeft="32dp"
-    android:paddingRight="32dp"
+    android:paddingLeft="41.33dp"
+    android:paddingRight="41.33dp"
     tools:context="com.blackboxteam.app.blackbox.LoginScreenActivity">
 
     <ImageView
@@ -23,12 +23,15 @@
         android:src="@drawable/blackbox_logo" />
 
     <TextView
-        android:id="@+id/tv_logo"
+        android:id="@+id/LogoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Blackbox"
+        fontPath="fonts/Avenir-Heavy.ttf"
         android:textSize="35sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="18.44dp"
         android:textStyle="bold" />
 
     <android.support.design.widget.TextInputLayout
@@ -42,6 +45,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            android:layout_marginLeft="18.6dp"
+            android:layout_marginRight="18.6dp"
+            fontPath="fonts/Avenir-Book.ttf"
             android:inputType="textEmailAddress" />
 
     </android.support.design.widget.TextInputLayout>
@@ -59,6 +65,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            fontPath="fonts/Avenir-Book.ttf"
+            android:layout_marginLeft="18.6dp"
+            android:layout_marginRight="18.6dp"
             android:inputType="textPassword" />
 
     </android.support.design.widget.TextInputLayout>
@@ -66,13 +75,16 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="LOGIN"
+        fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
         android:layout_marginTop="30dp"
         android:textColor="@android:color/white"
-        android:background="@color/secureBtn"/>
+        android:layout_marginLeft="70.89dp"
+        android:layout_marginRight="70.89dp"
+        android:background="@color/secureButtonBackgroundColor"/>
 
     <TextView
         android:id="@+id/tv_forget"
@@ -81,9 +93,11 @@
         android:layout_gravity="center_horizontal"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:layout_marginTop="8dp"
-        android:text="Forget Password"
-        android:textSize="20sp"/>
+        android:layout_marginTop="2.22dp"
+        android:text="Forgot Password"
+        android:layout_marginBottom="114.89dp"
+        fontPath="fonts/Avenir-Book.ttf"
+        android:textSize="15sp"/>
 
 
 </LinearLayout>

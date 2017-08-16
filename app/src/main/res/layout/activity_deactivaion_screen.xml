@@ -47,5 +47,5 @@
         android:layout_marginTop="50dp"
         android:textColor="@android:color/white"
         android:onClick=""
-        android:background="@color/secureBtn"/>
+        android:background="@color/secureButtonBackgroundColor"/>
 </LinearLayout>
