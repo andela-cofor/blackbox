@@ -1,5 +1,6 @@
 package com.blackboxteam.app.blackbox;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
@@ -13,6 +14,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import com.blackboxteam.app.blackbox.util.Validation;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.blackboxteam.app.blackbox.util.Validation.validateEmail;
 import static com.blackboxteam.app.blackbox.util.Validation.validateMinLength;
@@ -78,5 +81,10 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
             case R.id.button_login:
                 login();
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

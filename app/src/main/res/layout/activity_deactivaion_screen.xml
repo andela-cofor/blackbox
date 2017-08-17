@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    tools:context="com.blackboxteam.app.blackbox.ActivateBlackboxScreenActivity">
+    android:padding="@dimen/activity_padding"
+    tools:context="com.blackboxteam.app.blackbox.DeactivaionScreenActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -16,20 +15,17 @@
         android:layout_height="104dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="105dp"
-        android:src="@drawable/blackbox_cancelmark" />
+        android:layout_marginTop="80dp"
+        android:src="@drawable/blackbox_checkmark" />
 
     <TextView
         android:id="@+id/LogoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
-        android:text="Your device is not secure"
-        fontPath="fonts/Avenir-Heavy.ttf"
-        android:textSize="28sp"
-        android:textColor="@color/colorPrimaryDark"
-        android:paddingBottom="2.89dp"
+        android:layout_marginTop="30dp"
+        android:text="Your device is secure"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
@@ -38,22 +34,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:layout_marginTop="4dp"
-        fontPath="fonts/Avenir-Book.ttf"
-        android:text="Blackbox is de-actived"
-        android:textSize="24sp" />
+        android:paddingTop="10dp"
+        android:text="Blackbox is active"
+        android:textSize="25sp" />
 
     <Button
-        android:id="@+id/button_activate"
-        android:layout_width="150dp"
+        android:id="@+id/button_deactivate"
+        android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:text="ACTIVATE"
+        android:text="DE-ACTIVATE"
         android:layout_marginTop="50dp"
-        fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
-        android:letterSpacing="0.2"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
         android:onClick=""
         android:background="@color/secureButtonBackgroundColor"/>
 </LinearLayout>
