@@ -17,7 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginScreenActivity"></activity>
+        <activity android:name=".LoginScreenActivity" />
+        <activity
+            android:theme="@style/AppThemeNoActionBar1"
+            android:name=".SignUpScreen" />
+        <activity android:name=".EmptyScreen"></activity>
     </application>
 
 </manifest>
