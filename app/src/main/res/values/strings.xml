@@ -2,4 +2,9 @@
     <string name="app_name">Blackbox</string>
     <string name="secure_text">SECURE YOUR PHONE</string>
     <string name="app_aim">Blackbox protects your device against thefts</string>
+
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_btn_text">LOGIN</string>
+    <string name="login_tv_text">Forgot Password</string>
 </resources>

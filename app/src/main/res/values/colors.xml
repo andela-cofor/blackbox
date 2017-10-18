@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#6e6e6e</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="hintColor">#959595</color>
 
     <color name="secureButtonBackgroundColor">#5c5c5c</color>
     <color name="secureButtonTextColor">#fff</color>

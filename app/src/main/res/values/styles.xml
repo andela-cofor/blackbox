@@ -16,4 +16,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextLabel" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/hintColor</item>
+    </style>
+
 </resources>
