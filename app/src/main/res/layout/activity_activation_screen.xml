@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/body"
+    android:padding="@dimen/activation_screen_padding"
+    android:weightSum="1"
+    tools:context="com.blackboxteam.app.blackbox.ActivationScreenActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/activation_screen_img_layout_width"
+        android:layout_height="@dimen/activation_screen_img_layout_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activation_screen_img_layout_marginBottom"
+        android:layout_marginTop="@dimen/activation_screen_img_layout_marginTop"
+        android:src="@drawable/blackbox_envelope"
+        android:layout_weight="0.20" />
+
+    <TextView
+        android:id="@+id/LogoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Awesome!"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/activation_screen_tv1_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/activation_screen_tv2_padding_top"
+        android:paddingLeft="@dimen/activation_screen_tv2_padding_left"
+        android:paddingRight="@dimen/activation_screen_tv2_padding_right"
+        android:textColor="@android:color/white"
+        android:text="@string/activation_text"
+        android:textSize="@dimen/activation_screen_tv2_text_size"/>
+
+    <Button
+        android:id="@+id/button_secure"
+        android:layout_width="@dimen/activation_screen_btn_layout_width"
+        android:layout_height="@dimen/activation_screen_btn_layout_height"
+        android:layout_gravity="center_horizontal"
+        android:text="ACTIVATE"
+        android:layout_marginTop="@dimen/activation_screen_btn_layout_marginTop"
+        android:textColor="@color/secureButtonBackgroundColor"
+        android:onClick="sendConfirmationMail"
+        android:background="@android:color/white"/>
+</LinearLayout>

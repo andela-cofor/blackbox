@@ -15,4 +15,5 @@
     <string name="signup_email_text_hint">Email</string>
     <string name="signup_password_text_hint">Password</string>
 
+    <string name="activation_text">Once you activate Blackbox, you will receive an email, to <b>john.doe@gmail.com</b> each time a new SIM card is inserted in this device, containing the device location and the new SIM card phone number</string>
 </resources>
