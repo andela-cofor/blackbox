@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="@dimen/deactivation_screen_padding"
+    tools:context="com.blackboxteam.app.blackbox.DeactivationScreenActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/deactivation_screen_img_layout_width"
+        android:layout_height="@dimen/deactivation_screen_img_layout_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/deactivation_screen_img_layout_marginBottom"
+        android:layout_marginTop="@dimen/deactivation_screen_img_layout_marginTop"
+        android:src="@drawable/blackbox_checkmark" />
+
+    <TextView
+        android:id="@+id/LogoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/deactivation_screen_tv1_layout_marginTop"
+        android:text="@string/app_secure"
+        android:textSize="@dimen/deactivation_screen_tv1_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingTop="@dimen/deactivation_screen_tv2_padding_top"
+        android:text="@string/activate_app"
+        android:textSize="@dimen/deactivation_screen_tv2_text_size" />
+
+    <Button
+        android:id="@+id/button_deactivate"
+        android:layout_width="@dimen/deactivation_screen_btn_layout_width"
+        android:layout_height="@dimen/deactivation_screen_btn_layout_height"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/deactivate_btn"
+        android:layout_marginTop="@dimen/deactivation_screen_btn_layout_marginTop"
+        android:textColor="@android:color/white"
+        android:onClick="deactivateBlackbox"
+        android:background="@color/secureButtonBackgroundColor"/>
+</LinearLayout>
