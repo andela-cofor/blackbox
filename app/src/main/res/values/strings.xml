@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Blackbox</string>
     <string name="secure_text">SECURE YOUR PHONE</string>
+    <string name="app_secure">Your device is secure</string>
+    <string name="activate_app">Blackbox is active</string>
+    <string name="deactivate_btn">DE-ACTIVATE</string>
     <string name="app_aim">Blackbox protects your device against thefts</string>
 
     <string name="login_email_hint">Email</string>
