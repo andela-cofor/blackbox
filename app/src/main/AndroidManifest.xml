@@ -25,6 +25,7 @@
         <activity
             android:theme="@style/AppThemeNoActionBar1"
             android:name=".ActivationScreenActivity" />
+        <activity android:name=".ActivateBlackboxScreenActivity"></activity>
     </application>
 
 </manifest>

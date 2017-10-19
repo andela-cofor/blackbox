@@ -55,4 +55,16 @@
     <dimen name="activation_screen_btn_layout_width">170dp</dimen>
     <dimen name="activation_screen_btn_layout_height">40dp</dimen>
     <dimen name="activation_screen_btn_layout_marginTop">50dp</dimen>
+
+    <dimen name="activate_blackbox_screen_img_layout_width">141dp</dimen>
+    <dimen name="activate_blackbox_screen_img_layout_height">104dp</dimen>
+    <dimen name="activate_blackbox_screen_img_layout_marginBottom">20dp</dimen>
+    <dimen name="activate_blackbox_screen_img_layout_marginTop">80dp</dimen>
+    <dimen name="activate_blackbox_screen_tv1_layout_marginTop">30dp</dimen>
+    <dimen name="activate_blackbox_screen_tv1_text_size">28sp</dimen>
+    <dimen name="activate_blackbox_screen_tv2_text_size">23sp</dimen>
+    <dimen name="activate_blackbox_screen_tv2_padding_top">10dp</dimen>
+    <dimen name="activate_blackbox_screen_btn_layout_width">180dp</dimen>
+    <dimen name="activate_blackbox_screen_btn_layout_height">40dp</dimen>
+    <dimen name="activate_blackbox_screen_btn_layout_marginTop">50dp</dimen>
 </resources>
