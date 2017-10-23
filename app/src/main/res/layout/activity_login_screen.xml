@@ -65,7 +65,6 @@
 
     </android.support.design.widget.TextInputLayout>
 
-
     <Button
         android:id="@+id/btn_login"
         android:layout_width="@dimen/login_screen_btn_layout_width"

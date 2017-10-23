@@ -27,4 +27,21 @@
     <dimen name="login_screen_tv_layout_marginTop">8dp</dimen>
     <dimen name="login_screen_text_size">35sp</dimen>
     <dimen name="login_screen_tv_size">20sp</dimen>
+
+    <dimen name="signUp_screen_padding">41.33dp</dimen>
+    <dimen name="signUp_screen_img_layout_width">199dp</dimen>
+    <dimen name="signUp_screen_img_layout_height">67dp</dimen>
+    <dimen name="signUp_screen_img_layout_marginTop">39pt</dimen>
+    <dimen name="signUp_screen_img_layout_marginBottom">25.11dp</dimen>
+
+    <dimen name="signUp_screen_widget1_layout_marginTop">20dp</dimen>
+    <dimen name="signUp_screen_widget2_layout_marginTop">10dp</dimen>
+
+    <dimen name="signUp_screen_btn_layout_width">170dp</dimen>
+    <dimen name="signUp_screen_btn_layout_height">40dp</dimen>
+    <dimen name="signUp_screen_btn_layout_marginTop">50dp</dimen>
+
+    <dimen name="signUp_screen_tv_paddingTop">20dp</dimen>
+    <dimen name="signUp_screen_tv_textSize">15sp</dimen>
+
 </resources>
