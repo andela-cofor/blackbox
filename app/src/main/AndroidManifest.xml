@@ -8,20 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeNoActionBar">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LaunchScreenActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginScreenActivity" />
-        <activity
-            android:theme="@style/AppThemeNoActionBar1"
-            android:name=".SignUpScreen" />
-        <activity android:name=".EmptyScreen"></activity>
     </application>
 
 </manifest>
