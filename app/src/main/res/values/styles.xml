@@ -16,4 +16,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Base application theme. -->
+    <style name="AppThemeNoActionBar1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/body</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextLabel" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/signUp_et_text_color</item>
+        <item name="android:textColorHint">@color/signUp_et_text_color</item>
+        <item name="colorControlNormal">@color/signUp_et_text_color</item>
+    </style>
+
 </resources>
