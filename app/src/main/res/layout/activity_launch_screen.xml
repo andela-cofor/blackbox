@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="@dimen/activity_padding"
+    tools:context="com.blackboxteam.app.blackbox.LaunchScreenActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/launch_screen_img_margin_top"
+        android:layout_marginBottom="@dimen/launch_screen_img_margin_bottom"
+        android:src="@drawable/blackbox_logo" />
+
+    <TextView
+        android:id="@+id/LogoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/app_name"
+        fontPath="fonts/Avenir-Heavy.ttf"
+        android:textSize="@dimen/launch_screen_tv1_text_size"
+        android:textColor="@color/colorPrimaryDark"
+        android:paddingBottom="@dimen/launch_screen_tv1_padding_bottom"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/launch_screen_tv2_layout_marginLeft"
+        android:layout_marginRight="@dimen/launch_screen_tv2_layout_marginRight"
+        android:layout_marginBottom="@dimen/launch_screen_tv2_layout_marginBottom"
+        android:text="@string/app_aim"
+        fontPath="fonts/Avenir-Book.ttf"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/launch_screen_tv2_text_size"/>
+
+    <Button
+        android:id="@+id/secureButton"
+        android:layout_width="@dimen/launch_screen_btn_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/secure_text"
+        android:layout_marginBottom="@dimen/launch_screen_btn_layout_marginBottom"
+        android:layout_marginLeft="@dimen/launch_screen_btn_layout_marginLeft"
+        android:layout_marginRight="@dimen/launch_screen_btn_layout_marginRight"
+        android:textColor="@color/secureButtonTextColor"
+        fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
+        android:background="@color/secureButtonBackgroundColor"/>
+</LinearLayout>

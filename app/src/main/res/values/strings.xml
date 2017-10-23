@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Blackbox</string>
+    <string name="secure_text">SECURE YOUR PHONE</string>
+    <string name="app_aim">Blackbox protects your device against thefts</string>
+
+    <string name="signup_text_line1">Sign up with an <b>accessible</b></string>
+    <string name="signup_text_line2">email address and a <b>secure</b> password</string>
+
+    <string name="signup_button_text">SIGN UP</string>
+    <string name="signup_email_text_hint">Email</string>
+    <string name="signup_password_text_hint">Password</string>
+
 </resources>
