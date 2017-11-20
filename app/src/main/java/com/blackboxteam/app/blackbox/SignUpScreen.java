@@ -11,55 +11,54 @@ import android.widget.Toast;
 
 import com.blackboxteam.app.blackbox.util.Validation;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static com.blackboxteam.app.blackbox.util.Validation.validateEmail;
 import static com.blackboxteam.app.blackbox.util.Validation.validateMinLength;
 import static com.blackboxteam.app.blackbox.util.Validation.validateSpecialCharacters;
 
 public class SignUpScreen extends AppCompatActivity implements View.OnClickListener {
 
-    Button signinBtn;
-    EditText etEmail, etPassword;
-    TextInputLayout tiEmail, tiPassword;
-    Validation validate;
+    @BindView(R.id.btn_signin) Button mSigninButton;
+    @BindView(R.id.et_email) EditText mEditTextEmail;
+    @BindView(R.id.et_password) EditText mEditTextPassword;
+    @BindView(R.id.ti_email) TextInputLayout mTextInputEmail;
+    @BindView(R.id.ti_password) TextInputLayout mTextInputPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_screen);
-
-        signinBtn = (Button) findViewById(R.id.btn_signin);
-        signinBtn.setOnClickListener(this);
-        etEmail = (EditText) findViewById(R.id.et_email);
-        etPassword = (EditText) findViewById(R.id.et_password);
-        tiEmail = (TextInputLayout) findViewById(R.id.ti_email);
-        tiPassword = (TextInputLayout) findViewById(R.id.ti_password);
+        ButterKnife.bind(this);
+        mSigninButton.setOnClickListener(this);
     }
 
     private void setError() {
-        tiEmail.setError(null);
-        tiPassword.setError(null);
+        mTextInputEmail.setError(null);
+        mTextInputPassword.setError(null);
     }
 
     private void signIn() {
         setError();
-        String email = etEmail.getText().toString();
-        String password = etPassword.getText().toString();
+        String email = mEditTextEmail.getText().toString();
+        String password = mEditTextPassword.getText().toString();
         
         int err = 0;
 
         if(!validateEmail(email)) {
             err++;
-            tiEmail.setError("Please enter a valid email");
+            mTextInputEmail.setError("Please enter a valid email");
         }
 
         if (!validateMinLength(password, 8)) {
             err++;
-            tiPassword.setError("Password must be at least 8 characters");
+            mTextInputPassword.setError("Password must be at least 8 characters");
         }
 
         if (!validateSpecialCharacters(password)) {
             err++;
-            tiPassword.setError("Password contains special characters");
+            mTextInputPassword.setError("Password contains special characters");
         }
 
         if (err == 0) {
