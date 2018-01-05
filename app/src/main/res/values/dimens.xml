@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="activity_padding">16dp</dimen>
+
     <dimen name="launch_screen_img_margin_top">87.33dp</dimen>
     <dimen name="launch_screen_img_margin_bottom">11.78dp</dimen>
-
     <dimen name="launch_screen_tv1_text_size">35sp</dimen>
     <dimen name="launch_screen_tv1_padding_bottom">2.89dp</dimen>
-
     <dimen name="launch_screen_tv2_layout_marginLeft">44.00dp</dimen>
     <dimen name="launch_screen_tv2_layout_marginRight">43.33dp</dimen>
     <dimen name="launch_screen_tv2_layout_marginBottom">85.11dp</dimen>
     <dimen name="launch_screen_tv2_text_size">20sp</dimen>
-
     <dimen name="launch_screen_btn_layout_width">155.56dp</dimen>
     <dimen name="launch_screen_btn_layout_marginBottom">103.78dp</dimen>
     <dimen name="launch_screen_btn_layout_marginLeft">71.11dp</dimen>
@@ -44,4 +42,17 @@
     <dimen name="signUp_screen_tv_paddingTop">20dp</dimen>
     <dimen name="signUp_screen_tv_textSize">15sp</dimen>
 
+    <dimen name="activation_screen_padding">39dp</dimen>
+    <dimen name="activation_screen_img_layout_width">199dp</dimen>
+    <dimen name="activation_screen_img_layout_height">67dp</dimen>
+    <dimen name="activation_screen_img_layout_marginBottom">20dp</dimen>
+    <dimen name="activation_screen_img_layout_marginTop">40dp</dimen>
+    <dimen name="activation_screen_tv1_text_size">35sp</dimen>
+    <dimen name="activation_screen_tv2_text_size">15sp</dimen>
+    <dimen name="activation_screen_tv2_padding_top">20dp</dimen>
+    <dimen name="activation_screen_tv2_padding_left">10dp</dimen>
+    <dimen name="activation_screen_tv2_padding_right">10dp</dimen>
+    <dimen name="activation_screen_btn_layout_width">170dp</dimen>
+    <dimen name="activation_screen_btn_layout_height">40dp</dimen>
+    <dimen name="activation_screen_btn_layout_marginTop">50dp</dimen>
 </resources>

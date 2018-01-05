@@ -18,12 +18,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginScreenActivity" />
-        <activity android:name=".EmptyScreen"></activity>
-        <activity android:name=".LoginScreenActivity" />
         <activity
             android:theme="@style/AppThemeNoActionBar1"
             android:name=".SignUpScreen" />
         <activity android:name=".EmptyScreen" />
+        <activity
+            android:theme="@style/AppThemeNoActionBar1"
+            android:name=".ActivationScreenActivity" />
     </application>
 
 </manifest>
