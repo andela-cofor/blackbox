@@ -49,7 +49,7 @@
         android:layout_gravity="center_horizontal"
         android:text="ACTIVATE"
         android:layout_marginTop="@dimen/activation_screen_btn_layout_marginTop"
-        android:textColor="@color/secureButtonBackgroundColor"
+        android:textColor="@color/buttonBackgroundColor"
         android:onClick="sendConfirmationMail"
         android:background="@android:color/white"/>
 </LinearLayout>

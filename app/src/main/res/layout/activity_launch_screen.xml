@@ -41,18 +41,17 @@
         android:text="@string/app_aim"
         fontPath="fonts/Avenir-Book.ttf"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/launch_screen_tv2_text_size"/>
+        android:textSize="@dimen/launch_screen_tv2_text_size" />
 
     <Button
-        android:id="@+id/secureButton"
-        android:layout_width="@dimen/launch_screen_btn_layout_width"
+        android:id="@+id/launchScreenLoginButton"
+        android:layout_width="@dimen/launch_screen_btn_login_layout_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/secure_text"
-        android:layout_marginBottom="@dimen/launch_screen_btn_layout_marginBottom"
-        android:layout_marginLeft="@dimen/launch_screen_btn_layout_marginLeft"
-        android:layout_marginRight="@dimen/launch_screen_btn_layout_marginRight"
-        android:textColor="@color/secureButtonTextColor"
+        android:text="@string/launch_login_btn"
+        android:textColor="@color/launchScreenButtonTextColor"
         fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
-        android:background="@color/secureButtonBackgroundColor"/>
+        android:layout_marginBottom="@dimen/launch_screen_login_btn_layout_marginBottom"
+        android:background="@color/buttonBackgroundColor" />
+
 </LinearLayout>

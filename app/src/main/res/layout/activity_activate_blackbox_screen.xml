@@ -47,5 +47,5 @@
         android:layout_marginTop="@dimen/activate_blackbox_screen_btn_layout_marginTop"
         android:textColor="@android:color/white"
         android:onClick="activateBlackbox"
-        android:background="@color/secureButtonBackgroundColor"/>
+        android:background="@color/buttonBackgroundColor"/>
 </LinearLayout>
