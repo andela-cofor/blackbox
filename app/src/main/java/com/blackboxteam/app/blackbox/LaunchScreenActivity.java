@@ -14,7 +14,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class LaunchScreenActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @BindView(R.id.launchScreenLoginButton) Button loginScreen;
+    @BindView(R.id.launchScreenLoginButton) Button mloginScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class LaunchScreenActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_launch_screen);
         ButterKnife.bind(this);
 
-        loginScreen.setOnClickListener(this);
+        mloginScreen.setOnClickListener(this);
     }
 
     @Override
