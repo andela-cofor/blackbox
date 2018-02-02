@@ -28,11 +28,6 @@ public class LaunchScreenTest {
     public ActivityTestRule<LaunchScreenActivity> mActivityRule = new ActivityTestRule<>(
             LaunchScreenActivity.class);
 
-//    @Rule
-//    // third parameter is set to false which means the activity is not started automatically
-//    public ActivityTestRule<LoginScreenActivity> rule =
-//            new ActivityTestRule(LoginScresenActivity.class, true, false);
-
     @Test
     public void navigateToLogin() {
         // Clicks a button to navigate to login screen
