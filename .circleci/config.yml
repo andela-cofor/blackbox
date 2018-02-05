@@ -41,3 +41,5 @@ jobs:
 
       - store_test_results:
           path: app/build/test-results
+          post:
+              - bash <(curl -s https://codecov.io/bash)
