@@ -32,7 +32,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 
       - run:
-          name: Run Tests
+          name: Run Unit Tests
           command: ./gradlew test
 
       - store_artifacts:
@@ -41,5 +41,3 @@ jobs:
 
       - store_test_results:
           path: app/build/test-results
-          post:
-              - bash <(curl -s https://codecov.io/bash)
