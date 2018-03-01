@@ -9,29 +9,26 @@ import android.widget.Button;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
-public class LaunchScreenActivity extends AppCompatActivity implements View.OnClickListener {
+public class LaunchScreenActivity extends AppCompatActivity {
 
-    @BindView(R.id.launchScreenLoginButton) Button mloginScreen;
+    @BindView(R.id.launchScreenLoginButton)
+    Button mloginScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_screen);
         ButterKnife.bind(this);
-
-        mloginScreen.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.launchScreenLoginButton:
-                Intent intent = new Intent(LaunchScreenActivity.this, LoginScreenActivity.class);
-                startActivity(intent);
-        }
+    @OnClick(R.id.launchScreenLoginButton)
+    public void launchScreenLoginButton(){
+        Intent intent = new Intent(LaunchScreenActivity.this, LoginScreenActivity.class);
+        startActivity(intent);
     }
 
     @Override
