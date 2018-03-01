@@ -47,5 +47,5 @@
         android:layout_marginTop="@dimen/deactivation_screen_btn_layout_marginTop"
         android:textColor="@android:color/white"
         android:onClick="deactivateBlackbox"
-        android:background="@color/buttonBackgroundColor"/>
+        android:background="@color/primaryButtonBackgroundColor"/>
 </LinearLayout>

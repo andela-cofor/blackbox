@@ -49,9 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/launch_login_btn"
-        android:textColor="@color/launchScreenButtonTextColor"
+        android:textColor="@color/primaryButtonTextColor"
         fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
         android:layout_marginBottom="@dimen/launch_screen_login_btn_layout_marginBottom"
-        android:background="@color/buttonBackgroundColor" />
+        android:background="@color/primaryButtonBackgroundColor" />
 
 </LinearLayout>

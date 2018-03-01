@@ -4,8 +4,8 @@
     <color name="colorPrimaryDark">#6e6e6e</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="buttonBackgroundColor">#5c5c5c</color>
-    <color name="launchScreenButtonTextColor">#fff</color>
+    <color name="primaryButtonBackgroundColor">#5c5c5c</color>
+    <color name="primaryButtonTextColor">#fff</color>
 
     <color name="launchLoginBtn">#fff</color>
     <color name="launchSignUpBtn">#fff</color>
