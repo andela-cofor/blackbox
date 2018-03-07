@@ -32,7 +32,7 @@ public class LaunchScreenTest {
             LaunchScreenActivity.class);
 
     @Test
-    public void navigateToLogin() {
+    public void navigateToLogin () {
         // Clicks a button to navigate to login screen
         Intents.init();
         onView(withId(R.id.launchScreenLoginButton)).perform(click());
