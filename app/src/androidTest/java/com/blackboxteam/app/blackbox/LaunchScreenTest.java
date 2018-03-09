@@ -32,11 +32,20 @@ public class LaunchScreenTest {
             LaunchScreenActivity.class);
 
     @Test
-    public void navigateToLogin () {
+    public void navigateToLoginScreen () {
         // Clicks a button to navigate to login screen
         Intents.init();
         onView(withId(R.id.launchScreenLoginButton)).perform(click());
         intended(hasComponent(LoginScreenActivity.class.getName()));
+        Intents.release();
+    }
+
+    @Test
+    public void navigateToSignupScreen () {
+        // Clicks a button to navigate to signup screen
+        Intents.init();
+        onView(withId(R.id.launchScreenSignupButton)).perform(click());
+        intended(hasComponent(SignUpScreenActivity.class.getName()));
         Intents.release();
     }
 }
