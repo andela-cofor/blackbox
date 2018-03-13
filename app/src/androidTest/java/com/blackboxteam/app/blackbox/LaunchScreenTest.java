@@ -1,5 +1,6 @@
 package com.blackboxteam.app.blackbox;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -31,21 +32,27 @@ public class LaunchScreenTest {
     public ActivityTestRule<LaunchScreenActivity> mActivityRule = new ActivityTestRule<>(
             LaunchScreenActivity.class);
 
-    @Test
-    public void navigateToLoginScreen () {
-        // Clicks a button to navigate to login screen
+    @Before
+    public void setup() throws Exception {
         Intents.init();
-        onView(withId(R.id.launchScreenLoginButton)).perform(click());
-        intended(hasComponent(LoginScreenActivity.class.getName()));
+    }
+
+    @After
+    public void releaseIntents() throws Exception {
         Intents.release();
     }
 
     @Test
-    public void navigateToSignupScreen () {
+    public void navigateToLoginScreen() {
+        // Clicks a button to navigate to login screen
+        onView(withId(R.id.launchScreenLoginButton)).perform(click());
+        intended(hasComponent(LoginScreenActivity.class.getName()));
+    }
+
+    @Test
+    public void navigateToSignupScreen() {
         // Clicks a button to navigate to signup screen
-        Intents.init();
         onView(withId(R.id.launchScreenSignupButton)).perform(click());
         intended(hasComponent(SignUpScreenActivity.class.getName()));
-        Intents.release();
     }
 }
