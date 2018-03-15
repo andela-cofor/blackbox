@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/app_name"
-        fontPath="fonts/Avenir-Heavy.ttf"
+        android:fontFamily="@font/avenir_heavy"
         android:textSize="@dimen/launch_screen_tv1_text_size"
         android:textColor="@color/colorPrimaryDark"
         android:paddingBottom="@dimen/launch_screen_tv1_padding_bottom"
@@ -35,23 +35,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginLeft="@dimen/launch_screen_tv2_layout_marginLeft"
-        android:layout_marginRight="@dimen/launch_screen_tv2_layout_marginRight"
+        android:layout_marginStart="@dimen/launch_screen_tv2_layout_marginLeft"
+        android:layout_marginEnd="@dimen/launch_screen_tv2_layout_marginRight"
         android:layout_marginBottom="@dimen/launch_screen_tv2_layout_marginBottom"
         android:text="@string/app_aim"
-        fontPath="fonts/Avenir-Book.ttf"
+        android:fontFamily="@font/avenir_book"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/launch_screen_tv2_text_size" />
 
     <Button
         android:id="@+id/launchScreenLoginButton"
-        android:layout_width="@dimen/launch_screen_btn_login_layout_width"
+        android:layout_width="@dimen/launch_screen_btn_layout_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/launch_login_btn"
+        android:textSize="16sp"
         android:textColor="@color/primaryButtonTextColor"
-        fontPath="fonts/AvenirNextCondensed-DemiBold.ttf"
+        android:fontFamily="@font/avenir_next_condensed_demi_bold"
         android:layout_marginBottom="@dimen/launch_screen_login_btn_layout_marginBottom"
+        android:background="@color/primaryButtonBackgroundColor" />
+
+    <Button
+        android:id="@+id/launchScreenSignupButton"
+        android:layout_width="@dimen/launch_screen_btn_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/launch_signup_btn"
+        android:textSize="16sp"
+        android:textColor="@color/primaryButtonTextColor"
+        android:fontFamily="@font/avenir_next_condensed_demi_bold"
         android:background="@color/primaryButtonBackgroundColor" />
 
 </LinearLayout>

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import butterknife.BindView;
@@ -15,9 +14,6 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class LaunchScreenActivity extends AppCompatActivity {
 
-    @BindView(R.id.launchScreenLoginButton)
-    Button mloginScreen;
-
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +22,14 @@ public class LaunchScreenActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.launchScreenLoginButton)
-    public void launchScreenLoginButton (){
+    public void launchLoginScreenActivity (){
         Intent intent = new Intent(LaunchScreenActivity.this, LoginScreenActivity.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.launchScreenSignupButton)
+    public void launchSignupScreenActivity (){
+        Intent intent = new Intent(LaunchScreenActivity.this, SignUpScreenActivity.class);
         startActivity(intent);
     }
 

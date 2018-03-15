@@ -9,7 +9,7 @@
     android:background="@color/body"
     android:paddingLeft="@dimen/signUp_screen_padding"
     android:paddingRight="@dimen/signUp_screen_padding"
-    tools:context="com.blackboxteam.app.blackbox.SignUpScreen"
+    tools:context="com.blackboxteam.app.blackbox.SignUpScreenActivity"
     android:weightSum="1">
 
     <ImageView
