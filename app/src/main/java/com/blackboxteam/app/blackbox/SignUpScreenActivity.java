@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.blackboxteam.app.blackbox.util.Validation;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -18,7 +16,7 @@ import static com.blackboxteam.app.blackbox.util.Validation.validateEmail;
 import static com.blackboxteam.app.blackbox.util.Validation.validateMinLength;
 import static com.blackboxteam.app.blackbox.util.Validation.validateSpecialCharacters;
 
-public class SignUpScreen extends AppCompatActivity implements View.OnClickListener {
+public class SignUpScreenActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.btn_signin) Button mSigninButton;
     @BindView(R.id.et_email) EditText mEditTextEmail;
@@ -62,7 +60,7 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
         }
 
         if (err == 0) {
-            Intent intent = new Intent(SignUpScreen.this, EmptyScreen.class);
+            Intent intent = new Intent(SignUpScreenActivity.this, EmptyScreen.class);
             startActivity(intent);
         } else {
             showSnackBarMessage("Enter Valid Details !");
@@ -70,7 +68,7 @@ public class SignUpScreen extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showSnackBarMessage(String message){
-        Toast.makeText(SignUpScreen.this, message,
+        Toast.makeText(SignUpScreenActivity.this, message,
                 Toast.LENGTH_SHORT).show();
     }
 

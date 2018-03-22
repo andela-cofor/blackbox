@@ -8,12 +8,14 @@
     <dimen name="launch_screen_tv1_padding_bottom">2.89dp</dimen>
     <dimen name="launch_screen_tv2_layout_marginLeft">44.00dp</dimen>
     <dimen name="launch_screen_tv2_layout_marginRight">43.33dp</dimen>
-    <dimen name="launch_screen_tv2_layout_marginBottom">85.11dp</dimen>
-    <dimen name="launch_screen_tv2_text_size">20sp</dimen>
+    <dimen name="launch_screen_tv2_layout_marginBottom">64.44dp</dimen>
+    <dimen name="launch_screen_tv2_text_size">18sp</dimen>
+
     <dimen name="launch_screen_btn_layout_width">155.56dp</dimen>
-    <dimen name="launch_screen_btn_layout_marginBottom">103.78dp</dimen>
-    <dimen name="launch_screen_btn_layout_marginLeft">71.11dp</dimen>
-    <dimen name="launch_screen_btn_layout_marginRight">31.7pt</dimen>
+    <dimen name="launch_screen_btn_login_layout_height">155.56dp</dimen>
+    <dimen name="launch_screen_login_btn_layout_marginBottom">13.33dp</dimen>
+
+    <dimen name="launch_screen_btn_signUp_layout_width">155.56dp</dimen>
 
     <dimen name="login_screen_padding">32dp</dimen>
     <dimen name="login_screen_layout_marginBottom">20dp</dimen>

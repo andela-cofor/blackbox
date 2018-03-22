@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Blackbox</string>
-    <string name="secure_text">SECURE YOUR PHONE</string>
+
+    <string name="launch_scree_btn_login_text">LOGIN</string>
+    <string name="launch_login_btn">LOGIN</string>
+    <string name="launch_signup_btn">SIGN UP</string>
+
     <string name="app_secure">Your device is secure</string>
     <string name="activate_app">Blackbox is active</string>
     <string name="deactivate_btn">DE-ACTIVATE</string>

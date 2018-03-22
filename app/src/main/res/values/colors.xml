@@ -4,8 +4,11 @@
     <color name="colorPrimaryDark">#6e6e6e</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="secureButtonBackgroundColor">#5c5c5c</color>
-    <color name="secureButtonTextColor">#fff</color>
+    <color name="primaryButtonBackgroundColor">#5c5c5c</color>
+    <color name="primaryButtonTextColor">#fff</color>
+
+    <color name="launchLoginBtn">#fff</color>
+    <color name="launchSignUpBtn">#fff</color>
 
     <color name="body">#4C4C4C</color>
     <color name="signUpButtonTextColor">#4a4a4a</color>

@@ -73,7 +73,7 @@
         android:text="@string/login_btn_text"
         android:layout_marginTop="@dimen/login_screen_btn_layout_marginTop"
         android:textColor="@android:color/white"
-        android:background="@color/secureButtonBackgroundColor"/>
+        android:background="@color/primaryButtonBackgroundColor"/>
 
     <TextView
         android:id="@+id/tv_forget"

@@ -20,7 +20,7 @@
         <activity android:name=".LoginScreenActivity" />
         <activity
             android:theme="@style/AppThemeNoActionBar1"
-            android:name=".SignUpScreen" />
+            android:name=".SignUpScreenActivity" />
         <activity android:name=".EmptyScreen" />
         <activity
             android:theme="@style/AppThemeNoActionBar1"
