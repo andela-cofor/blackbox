@@ -78,8 +78,8 @@ public class LoginScreenActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onBackPressed() {
-        finish();
         Intent intent = new Intent(LoginScreenActivity.this, LaunchScreenActivity.class);
         startActivity(intent);
+        finish();
     }
 }

@@ -1,15 +1,11 @@
 package com.blackboxteam.app.blackbox;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 public class LaunchScreenActivity extends AppCompatActivity {
@@ -34,7 +30,7 @@ public class LaunchScreenActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void attachBaseContext (Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }

@@ -26,7 +26,7 @@
     <dimen name="login_screen_widget_layout_marginTop">10dp</dimen>
     <dimen name="login_screen_tv_layout_marginTop">8dp</dimen>
     <dimen name="login_screen_text_size">35sp</dimen>
-    <dimen name="login_screen_tv_size">20sp</dimen>
+    <dimen name="login_screen_tv_size">15sp</dimen>
 
     <dimen name="signUp_screen_padding">41.33dp</dimen>
     <dimen name="signUp_screen_img_layout_width">199dp</dimen>

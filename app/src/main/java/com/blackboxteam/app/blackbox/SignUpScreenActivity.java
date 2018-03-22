@@ -82,8 +82,8 @@ public class SignUpScreenActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onBackPressed() {
-        finish();
-        Intent intent = new Intent(SignUpScreen.this, LaunchScreenActivity.class);
+        Intent intent = new Intent(SignUpScreenActivity.this, LaunchScreenActivity.class);
         startActivity(intent);
+        finish();
     }
 }
