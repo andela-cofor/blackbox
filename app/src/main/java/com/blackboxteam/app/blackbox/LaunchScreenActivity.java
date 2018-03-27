@@ -16,7 +16,7 @@ import butterknife.OnClick;
 
 
 public class LaunchScreenActivity extends AppCompatActivity {
-    public String text;
+    public boolean text;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -46,9 +46,11 @@ public class LaunchScreenActivity extends AppCompatActivity {
     public void saveUser() {
         UserSessionPersistence userSessionPersistence = new UserSessionPersistence(getApplicationContext());
         userSessionPersistence.saveUserInfo("ofor", "ofor");
-        text = userSessionPersistence.getUserInfo("userInfo");
+        text = userSessionPersistence.checkLoginStatus("userInfo");
 
-        Toast.makeText(LaunchScreenActivity.this, text,
+        String str = String.valueOf(text);
+
+        Toast.makeText(LaunchScreenActivity.this, str,
                 Toast.LENGTH_LONG).show();
 
     }
