@@ -45,9 +45,8 @@ public class LaunchScreenActivity extends AppCompatActivity {
 
     public void saveUser() {
         UserSessionPersistence userSessionPersistence = new UserSessionPersistence(getApplicationContext());
-//        userSessionPersistence.saveUserInfo("ofor", "ofor");
+        boolean success = userSessionPersistence.saveUserInfo("mmm", "mmm");
         text = userSessionPersistence.checkLoginStatus("userInfo");
-        String email = userSessionPersistence.getEmail("userInfo");
 
         String str = String.valueOf(text);
 
