@@ -11,19 +11,14 @@ import android.widget.Toast;
  */
 public class UserSessionPersistence {
     private Context mContext;
-    private String user;
-
-    public UserSessionPersistence () {
-
-    }
 
     // Save the user login/signIp info
-    public void saveUserInfo(String email, String password) {
+    public void saveUserInfo(String username, String password) {
         SharedPreferences sharedPreferences;
         sharedPreferences = mContext.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("username", email);
+        editor.putString("username", username);
         editor.putString("password", password);
         editor.apply();
     }
