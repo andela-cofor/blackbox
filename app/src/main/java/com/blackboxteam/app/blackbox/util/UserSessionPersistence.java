@@ -27,7 +27,7 @@ public class UserSessionPersistence {
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(USER_EMAIL, email);
-        editor.putString(USER_EMAIL, password);
+        editor.putString(USER_PAAWORD, password);
         return editor.commit();
     }
 
