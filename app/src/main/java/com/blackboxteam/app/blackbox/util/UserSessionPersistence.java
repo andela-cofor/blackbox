@@ -11,7 +11,6 @@ import android.widget.Toast;
  */
 public class UserSessionPersistence {
     private Context mContext;
-    private String user;
     private SharedPreferences sharedPreferences;
 
     public UserSessionPersistence(Context context) {
