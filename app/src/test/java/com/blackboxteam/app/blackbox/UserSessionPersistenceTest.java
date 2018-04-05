@@ -20,28 +20,35 @@ import static org.junit.Assert.assertThat;
 @RunWith(MockitoJUnitRunner.class)
 public class UserSessionPersistenceTest {
 
-    private static final boolean FAKE_STRING = true;
+    private UserSessionPersistence mMockUserSessionPersistence;
 
     @Mock
     Context mMockContext;
 
     UserSessionPersistence userSessionPersistence = new UserSessionPersistence(mMockContext);
 
+
     @Test
     public void saveUserInfo_shouldSaveUserInfo(){
         SharedPreferences mockedSharedPreference = Mockito.mock(SharedPreferences.class);
 
-        Mockito.when(mMockContext.getSharedPreferences(Mockito.anyString(), Mockito.anyInt())).thenReturn(mockedSharedPreference);
+        Mockito.when(mMockContext.getSharedPreferences("userInfo", Context.MODE_PRIVATE)).thenReturn(mockedSharedPreference);
 
         SharedPreferences.Editor mockedEditor = Mockito.mock(SharedPreferences.Editor.class);
 
         Mockito.when(mockedSharedPreference.edit()).thenReturn(mockedEditor);
 
-        boolean result = userSessionPersistence.saveUserInfo("email", "password");
+        boolean success =
+                mMockUserSessionPersistence.saveUserInfo("email", "password");
+        assertThat( success,
+                is(true));
 
-//        assertThat(result, is(FAKE_STRING));
+//        userSessionPersistence.saveUserInfo("email", "password");
 
-//        Mockito.verify(mockedEditor).apply();
+//        Mockito.verify(mockedEditor).commit();
+        return new mMockUserSessionPersistence(mockedSharedPreference);
+
+
     }
 
 }
