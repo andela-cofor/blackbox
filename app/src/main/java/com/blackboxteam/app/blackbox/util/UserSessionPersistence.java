@@ -2,6 +2,7 @@ package com.blackboxteam.app.blackbox.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 /**
@@ -13,6 +14,9 @@ public class UserSessionPersistence {
     private Context mContext;
     private SharedPreferences sharedPreferences;
 
+    private static final String USER_EMAIL = "USER_EMAILE";
+    private static final String USER_PAAWORD = "USER_EMAILE";
+
     public UserSessionPersistence(Context context) {
         mContext = context;
     }
@@ -22,8 +26,8 @@ public class UserSessionPersistence {
         sharedPreferences = mContext.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("email", email);
-        editor.putString("password", password);
+        editor.putString(USER_EMAIL, email);
+        editor.putString(USER_EMAIL, password);
         return editor.commit();
     }
 
