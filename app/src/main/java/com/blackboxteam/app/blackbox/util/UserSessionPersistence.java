@@ -12,30 +12,41 @@ import android.widget.Toast;
  */
 public class UserSessionPersistence {
     private Context mContext;
-    private SharedPreferences sharedPreferences;
+    private SharedPreferences mSharedPreferences;
 
-    private static final String USER_EMAIL = "USER_EMAILE";
-    private static final String USER_PAAWORD = "USER_EMAILE";
+    public static final String USER_EMAIL = "USER_EMAIL";
+    public static final String USER_TOKEN = "USER_TOKEN";
+    static final String LOGGED_USER_PREFERENCES = "USER_INFO";
 
     public UserSessionPersistence(Context context) {
-        mContext = context;
+        this.mContext = context;
+        mSharedPreferences = mContext.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
     }
 
-    // Save the user login/signIp info
-    public boolean saveUserInfo(String email, String password) {
-        sharedPreferences = mContext.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+    public UserSessionPersistence(Context context, SharedPreferences sharedPreferences) {
+        this.mContext = context;
+        this.mSharedPreferences = sharedPreferences;
+    }
 
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(USER_EMAIL, email);
-        editor.putString(USER_PAAWORD, password);
+    /**
+     * Saves the given user info to SharedPreference
+     * @param userSessionPersistenceEntry contains data to save
+     * @return boolean
+     */
+    public boolean saveUserInfo(UserSessionPersistenceEntry userSessionPersistenceEntry) {
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
+        editor.putString(USER_EMAIL, userSessionPersistenceEntry.getEmail());
+        editor.putString(USER_TOKEN, userSessionPersistenceEntry.getToken());
         return editor.commit();
     }
 
     // returns user login status
-    public boolean checkLoginStatus(String sharedPrefName) {
-        sharedPreferences = mContext.getSharedPreferences(sharedPrefName, Context.MODE_PRIVATE);
 
-        return sharedPreferences != null;
+    public UserSessionPersistenceEntry getUserInfo() {
+        String email = mSharedPreferences.getString(USER_EMAIL, "");
+        String token = mSharedPreferences.getString(USER_TOKEN, "");
+
+        return new UserSessionPersistenceEntry(email, token);
     }
 
 }
