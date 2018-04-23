@@ -63,7 +63,7 @@ public class UserSessionPersistenceTest {
         // Save the personal information to SharedPreferences
         boolean success = mMockUserSessionPersistence.saveUserInfo(mUserSessionPersistenceEntry);
 
-        assertThat("Checking that SharedPreferenceEntry.save... returns true",
+        assertThat("Checking that UserSessionPersistence.saveUserInfo... returns true",
                 success, is(true));
 
         // Read user info from SharedPreferences
@@ -87,6 +87,21 @@ public class UserSessionPersistenceTest {
                 mMockUserSessionPersistenceWithBrokenSharedPreference.saveUserInfo(mUserSessionPersistenceEntry);
         assertThat("Makes sure writing to a broken SharedPreferencesHelper returns false", success,
                 is(false));
+    }
+
+    @Test
+    public void userSessionPersistence_LogOutUser() {
+        // Save the personal information to SharedPreferences
+        boolean saveSuccess = mMockUserSessionPersistence.saveUserInfo(mUserSessionPersistenceEntry);
+
+        assertThat("Checking that UserSessionPersistence.saveUserInfo... returns true",
+                saveSuccess, is(true));
+
+        // clear user shared preference
+        boolean logoutSuccess = mMockUserSessionPersistence.logOutUser();
+
+        assertThat("Checking that UserSessionPersistence.logOutUser... returns true",
+                logoutSuccess, is(true));
     }
 
     /**
@@ -117,6 +132,7 @@ public class UserSessionPersistenceTest {
 
         // Return the MockEditor when requesting it.
         Mockito.when(mMockSharedPreferences.edit()).thenReturn(mMockEditor);
+
         return new UserSessionPersistence(mMockContext, mMockSharedPreferences);
     }
 

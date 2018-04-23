@@ -16,7 +16,7 @@ public class UserSessionPersistence {
 
     public static final String USER_EMAIL = "USER_EMAIL";
     public static final String USER_TOKEN = "USER_TOKEN";
-    static final String LOGGED_USER_PREFERENCES = "USER_INFO";
+    private static final String LOGGED_USER_PREFERENCES = "USER_INFO";
 
     public UserSessionPersistence(Context context) {
         this.mContext = context;
@@ -49,6 +49,15 @@ public class UserSessionPersistence {
         String token = mSharedPreferences.getString(USER_TOKEN, "");
 
         return new UserSessionPersistenceEntry(email, token);
+    }
+
+    /**
+     * Clear user persistence
+     */
+    public boolean logOutUser() {
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
+        editor.clear();
+        return editor.commit();
     }
 
 }
