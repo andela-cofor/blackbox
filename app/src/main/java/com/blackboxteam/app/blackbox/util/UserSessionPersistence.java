@@ -20,7 +20,7 @@ public class UserSessionPersistence {
 
     public UserSessionPersistence(Context context) {
         this.mContext = context;
-        mSharedPreferences = mContext.getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+        mSharedPreferences = mContext.getSharedPreferences(LOGGED_USER_PREFERENCES, Context.MODE_PRIVATE);
     }
 
     public UserSessionPersistence(Context context, SharedPreferences sharedPreferences) {
@@ -40,8 +40,10 @@ public class UserSessionPersistence {
         return editor.commit();
     }
 
-    // returns user login status
-
+    /**
+     * Retrieves the UserSessionPersistenceEntry containing the user information
+     * @return the retrieved UserSessionPersistenceEntry
+     */
     public UserSessionPersistenceEntry getUserInfo() {
         String email = mSharedPreferences.getString(USER_EMAIL, "");
         String token = mSharedPreferences.getString(USER_TOKEN, "");
