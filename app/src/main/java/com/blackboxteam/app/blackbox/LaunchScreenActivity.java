@@ -9,7 +9,6 @@ import butterknife.OnClick;
 
 
 public class LaunchScreenActivity extends AppCompatActivity {
-    public boolean text;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {

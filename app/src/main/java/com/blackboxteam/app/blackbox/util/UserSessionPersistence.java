@@ -1,63 +1,36 @@
 package com.blackboxteam.app.blackbox.util;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.widget.Toast;
 
 /**
  * UserSessionPersistence
  *
- * Manages user session
+ * Persists user session information
  */
 public class UserSessionPersistence {
-    private Context mContext;
     private SharedPreferences mSharedPreferences;
 
-    public static final String USER_EMAIL = "USER_EMAIL";
-    public static final String USER_TOKEN = "USER_TOKEN";
-    private static final String LOGGED_USER_PREFERENCES = "USER_INFO";
+    static final String ACTIVE_USER_SESSION = "ACTIVE_USER_SESSION";
 
-    public UserSessionPersistence(Context context) {
-        this.mContext = context;
-        mSharedPreferences = mContext.getSharedPreferences(LOGGED_USER_PREFERENCES, Context.MODE_PRIVATE);
-    }
-
-    public UserSessionPersistence(Context context, SharedPreferences sharedPreferences) {
-        this.mContext = context;
+    public UserSessionPersistence(SharedPreferences sharedPreferences) {
         this.mSharedPreferences = sharedPreferences;
     }
 
     /**
-     * Saves the given user info to SharedPreference
-     * @param userSessionPersistenceEntry contains data to save
-     * @return boolean
+     * Saves the active user session
+     * @param isLoggedIn boolean value to save user logged in status
      */
-    public boolean saveUserInfo(UserSessionPersistenceEntry userSessionPersistenceEntry) {
+    public void setActiveUserSession(boolean isLoggedIn){
         SharedPreferences.Editor editor = mSharedPreferences.edit();
-        editor.putString(USER_EMAIL, userSessionPersistenceEntry.getEmail());
-        editor.putString(USER_TOKEN, userSessionPersistenceEntry.getToken());
-        return editor.commit();
+        editor.putBoolean(ACTIVE_USER_SESSION, isLoggedIn);
+        editor.apply();
     }
 
     /**
-     * Retrieves the UserSessionPersistenceEntry containing the user information
-     * @return the retrieved UserSessionPersistenceEntry
+     * Get the active user session
+     * @return boolean - returns the login status
      */
-    public UserSessionPersistenceEntry getUserInfo() {
-        String email = mSharedPreferences.getString(USER_EMAIL, "");
-        String token = mSharedPreferences.getString(USER_TOKEN, "");
-
-        return new UserSessionPersistenceEntry(email, token);
+    public boolean isActiveUserSession() {
+        return mSharedPreferences.getBoolean(ACTIVE_USER_SESSION, false);
     }
-
-    /**
-     * Clear user persistence
-     */
-    public boolean logOutUser() {
-        SharedPreferences.Editor editor = mSharedPreferences.edit();
-        editor.clear();
-        return editor.commit();
-    }
-
 }
